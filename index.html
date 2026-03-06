@@ -2113,8 +2113,6 @@
             transition-delay: 0.24s;
         }
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8561820211737885"
-     crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -2132,6 +2130,7 @@
             <button class="nav-tab" onclick="scrollToSection('js-section')">JavaScript</button>
             <button class="nav-tab" onclick="scrollToSection('quiz-section')">Quiz</button>
             <button class="nav-tab" onclick="scrollToSection('cheat-section')">Cheat Sheet</button>
+            <button class="nav-tab" onclick="scrollToSection('exercices-section')">Exercices</button>
             <button class="nav-tab nav-tab-ide" onclick="scrollToSection('ide-section')">IDE en ligne</button>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
@@ -2145,6 +2144,7 @@
         <button class="nav-tab" onclick="scrollToSection('js-section');toggleMenu()">JavaScript</button>
         <button class="nav-tab" onclick="scrollToSection('quiz-section');toggleMenu()">Quiz</button>
         <button class="nav-tab" onclick="scrollToSection('cheat-section');toggleMenu()">Cheat Sheet</button>
+        <button class="nav-tab" onclick="scrollToSection('exercices-section');toggleMenu()">Exercices</button>
         <button class="nav-tab nav-tab-ide" onclick="scrollToSection('ide-section');toggleMenu()">IDE en ligne</button>
     </nav>
 
@@ -3134,7 +3134,8 @@ maPromesse
                     </div>
                     <h3 style="font-family:var(--font-heading);font-size:1.8rem;font-weight:800;margin-bottom:0.5rem"
                         id="scoreTitle">Résultat</h3>
-                    <p style="color:var(--gray);margin-bottom:1.5rem" id="scoreMsg"></p>
+                    <p style="color:var(--gray);margin-bottom:1rem" id="scoreMsg"></p>
+                    <div id="scoreDetails" style="margin-bottom:1.5rem"></div>
                     <button class="btn btn-primary" onclick="restartQuiz()">Recommencer</button>
                 </div>
             </div>
@@ -3227,6 +3228,243 @@ arr.<span class="fn">slice</span>(<span class="num">1</span>,<span class="num">3
                 </div>
             </div>
         </section>
+
+        <hr class="divider" />
+
+        <!-- ══════════════════════════════════════
+     EXERCICES PRATIQUES
+══════════════════════════════════════ -->
+        <section id="exercices-section" aria-label="Exercices pratiques">
+            <div class="section-header reveal">
+                <div class="section-tag">Mise en pratique</div>
+                <h2 class="section-title">Exercices Pratiques</h2>
+                <p style="color:var(--gray);max-width:600px;margin:0 auto">Deux mini-projets pour consolider tes compétences HTML, CSS &amp; JavaScript. Essaie d'abord par toi-même, puis consulte la solution !</p>
+            </div>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,540px),1fr));gap:2rem;max-width:1200px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem)">
+
+                <!-- ── EXERCICE 1 : TO DO LIST ── -->
+                <div class="reveal" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden">
+                    <div style="padding:1.5rem 1.5rem 1rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0.75rem">
+                        <span style="background:rgba(227,76,38,0.15);color:var(--html);border:1px solid rgba(227,76,38,0.3);border-radius:999px;font-family:var(--font-code);font-size:0.7rem;font-weight:700;padding:3px 12px">Exercice 01</span>
+                        <h3 style="font-family:var(--font-heading);font-size:1.2rem;font-weight:700">To-Do List</h3>
+                    </div>
+                    <div style="padding:1.5rem">
+                        <p style="color:var(--gray);font-size:0.95rem;margin-bottom:1.25rem">Crée une application de liste de tâches complète avec HTML, CSS et JavaScript.</p>
+                        <div style="background:var(--bg3);border-radius:var(--radius);padding:1.25rem;margin-bottom:1.25rem;border:1px solid var(--border)">
+                            <div style="font-family:var(--font-code);font-size:0.75rem;color:var(--gray);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.08em">Fonctionnalités requises</div>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem">
+                                <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem"><span style="color:#22c55e;font-size:1rem">✦</span> Ajouter une tâche via un champ texte</li>
+                                <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem"><span style="color:#22c55e;font-size:1rem">✦</span> Cocher une tâche comme terminée</li>
+                                <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem"><span style="color:#22c55e;font-size:1rem">✦</span> Supprimer une tâche</li>
+                                <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem"><span style="color:#22c55e;font-size:1rem">✦</span> Afficher le nombre de tâches restantes</li>
+                            </ul>
+                        </div>
+                        <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+                            <span style="background:rgba(227,76,38,0.1);color:var(--html);border:1px solid rgba(227,76,38,0.25);border-radius:6px;font-family:var(--font-code);font-size:0.7rem;padding:3px 10px">HTML</span>
+                            <span style="background:rgba(38,77,228,0.1);color:var(--css);border:1px solid rgba(38,77,228,0.25);border-radius:6px;font-family:var(--font-code);font-size:0.7rem;padding:3px 10px">CSS</span>
+                            <span style="background:rgba(247,202,24,0.1);color:var(--js);border:1px solid rgba(247,202,24,0.25);border-radius:6px;font-family:var(--font-code);font-size:0.7rem;padding:3px 10px">JavaScript</span>
+                        </div>
+                    </div>
+                    <div style="padding:0 1.5rem 1.5rem">
+                        <button class="btn btn-secondary" style="width:100%;justify-content:center;display:flex;align-items:center;gap:0.5rem" onclick="toggleSolution('todo')">
+                            <span id="todo-icon">👁</span> <span id="todo-label">Voir la solution</span>
+                        </button>
+                    </div>
+                    <div id="solution-todo" style="display:none;border-top:1px solid var(--border)">
+                        <div style="padding:1rem 1.5rem 0.5rem;font-family:var(--font-code);font-size:0.72rem;color:var(--gray);text-transform:uppercase;letter-spacing:0.08em">Solution complète</div>
+                        <pre style="background:var(--code-bg);margin:0.5rem 1.5rem 1.5rem;border-radius:var(--radius);padding:1.25rem;overflow-x:auto;font-family:var(--font-code);font-size:0.75rem;line-height:1.7;border:1px solid var(--border)"><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="str">"fr"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="str">"UTF-8"</span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;title&gt;</span>To-Do List<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;style&gt;</span>
+    <span class="prop">*</span> { box-sizing: border-box; margin: 0; padding: 0; }
+    <span class="prop">body</span> { font-family: sans-serif; background: #0f0f1a;
+           color: #f0f0f8; display: flex; justify-content: center;
+           align-items: flex-start; min-height: 100vh; padding: 2rem; }
+    <span class="prop">.app</span> { background: #1a1a28; border-radius: 16px;
+             padding: 2rem; width: 100%; max-width: 480px;
+             box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+    <span class="prop">h1</span> { font-size: 1.5rem; margin-bottom: 1.5rem;
+          color: #f7ca18; }
+    <span class="prop">.input-row</span> { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; }
+    <span class="prop">input</span> { flex: 1; padding: 0.6rem 1rem; border-radius: 8px;
+             border: 1px solid #2a2a3a; background: #0a0a0f;
+             color: #f0f0f8; font-size: 0.95rem; }
+    <span class="prop">button.add</span> { padding: 0.6rem 1.2rem; border-radius: 8px;
+                   background: #f7ca18; color: #000; border: none;
+                   font-weight: 700; cursor: pointer; }
+    <span class="prop">ul</span> { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    <span class="prop">li</span> { display: flex; align-items: center; gap: 0.75rem;
+          padding: 0.75rem 1rem; background: #0f0f1a;
+          border-radius: 10px; border: 1px solid #2a2a3a; }
+    <span class="prop">li.done span.text</span> { text-decoration: line-through; color: #666; }
+    <span class="prop">span.text</span> { flex: 1; }
+    <span class="prop">button.del</span> { background: rgba(227,76,38,0.15); color: #e34c26;
+                    border: 1px solid rgba(227,76,38,0.3); border-radius: 6px;
+                    padding: 2px 10px; cursor: pointer; font-size: 0.8rem; }
+    <span class="prop">.count</span> { margin-top: 1rem; font-size: 0.85rem; color: #8888aa; }
+  <span class="tag">&lt;/style&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"app"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>📝 Ma To-Do List<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"input-row"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"text"</span> <span class="attr">id</span>=<span class="str">"taskInput"</span> <span class="attr">placeholder</span>=<span class="str">"Nouvelle tâche..."</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"add"</span> <span class="attr">onclick</span>=<span class="str">"addTask()"</span><span class="tag">&gt;</span>Ajouter<span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;ul</span> <span class="attr">id</span>=<span class="str">"taskList"</span><span class="tag">&gt;&lt;/ul&gt;</span>
+    <span class="tag">&lt;p</span> <span class="attr">class</span>=<span class="str">"count"</span> <span class="attr">id</span>=<span class="str">"count"</span><span class="tag">&gt;</span>0 tâche restante<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;script&gt;</span>
+    <span class="kw">const</span> input = document.getElementById(<span class="str">'taskInput'</span>);
+    <span class="kw">const</span> list  = document.getElementById(<span class="str">'taskList'</span>);
+    <span class="kw">const</span> count = document.getElementById(<span class="str">'count'</span>);
+    <span class="kw">let</span> tasks = [];
+
+    input.addEventListener(<span class="str">'keydown'</span>, e =&gt; { <span class="kw">if</span> (e.key === <span class="str">'Enter'</span>) addTask(); });
+
+    <span class="kw">function</span> addTask() {
+      <span class="kw">const</span> txt = input.value.trim();
+      <span class="kw">if</span> (!txt) <span class="kw">return</span>;
+      tasks.push({ text: txt, done: <span class="kw">false</span> });
+      input.value = <span class="str">''</span>;
+      render();
+    }
+    <span class="kw">function</span> toggle(i) { tasks[i].done = !tasks[i].done; render(); }
+    <span class="kw">function</span> remove(i) { tasks.splice(i, 1); render(); }
+    <span class="kw">function</span> render() {
+      list.innerHTML = tasks.map((t, i) =&gt; <span class="str">`
+        &lt;li class="${t.done ? 'done' : ''}"&gt;
+          &lt;input type="checkbox" ${t.done ? 'checked' : ''}
+                 onchange="toggle(${i})"&gt;
+          &lt;span class="text"&gt;${t.text}&lt;/span&gt;
+          &lt;button class="del" onclick="remove(${i})"&gt;✕&lt;/button&gt;
+        &lt;/li&gt;`</span>).join(<span class="str">''</span>);
+      <span class="kw">const</span> rem = tasks.filter(t =&gt; !t.done).length;
+      count.textContent = rem + (rem &lt;= 1 ? <span class="str">' tâche restante'</span> : <span class="str">' tâches restantes'</span>);
+    }
+  <span class="tag">&lt;/script&gt;</span>
+<span class="tag">&lt;/body&gt;&lt;/html&gt;</span></pre>
+                    </div>
+                </div>
+
+                <!-- ── EXERCICE 2 : CALCULATRICE ── -->
+                <div class="reveal" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden">
+                    <div style="padding:1.5rem 1.5rem 1rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0.75rem">
+                        <span style="background:rgba(247,202,24,0.12);color:var(--js);border:1px solid rgba(247,202,24,0.3);border-radius:999px;font-family:var(--font-code);font-size:0.7rem;font-weight:700;padding:3px 12px">Exercice 02</span>
+                        <h3 style="font-family:var(--font-heading);font-size:1.2rem;font-weight:700">Calculatrice</h3>
+                    </div>
+                    <div style="padding:1.5rem">
+                        <p style="color:var(--gray);font-size:0.95rem;margin-bottom:1.25rem">Crée une calculatrice fonctionnelle avec un design soigné en HTML, CSS et JavaScript.</p>
+                        <div style="background:var(--bg3);border-radius:var(--radius);padding:1.25rem;margin-bottom:1.25rem;border:1px solid var(--border)">
+                            <div style="font-family:var(--font-code);font-size:0.75rem;color:var(--gray);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.08em">Fonctionnalités requises</div>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem">
+                                <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem"><span style="color:#f7ca18;font-size:1rem">✦</span> Opérations : +, −, ×, ÷</li>
+                                <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem"><span style="color:#f7ca18;font-size:1rem">✦</span> Bouton = pour afficher le résultat</li>
+                                <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem"><span style="color:#f7ca18;font-size:1rem">✦</span> Bouton C pour réinitialiser</li>
+                                <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem"><span style="color:#f7ca18;font-size:1rem">✦</span> Affichage de l'expression en cours</li>
+                            </ul>
+                        </div>
+                        <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+                            <span style="background:rgba(227,76,38,0.1);color:var(--html);border:1px solid rgba(227,76,38,0.25);border-radius:6px;font-family:var(--font-code);font-size:0.7rem;padding:3px 10px">HTML</span>
+                            <span style="background:rgba(38,77,228,0.1);color:var(--css);border:1px solid rgba(38,77,228,0.25);border-radius:6px;font-family:var(--font-code);font-size:0.7rem;padding:3px 10px">CSS</span>
+                            <span style="background:rgba(247,202,24,0.1);color:var(--js);border:1px solid rgba(247,202,24,0.25);border-radius:6px;font-family:var(--font-code);font-size:0.7rem;padding:3px 10px">JavaScript</span>
+                        </div>
+                    </div>
+                    <div style="padding:0 1.5rem 1.5rem">
+                        <button class="btn btn-secondary" style="width:100%;justify-content:center;display:flex;align-items:center;gap:0.5rem" onclick="toggleSolution('calc')">
+                            <span id="calc-icon">👁</span> <span id="calc-label">Voir la solution</span>
+                        </button>
+                    </div>
+                    <div id="solution-calc" style="display:none;border-top:1px solid var(--border)">
+                        <div style="padding:1rem 1.5rem 0.5rem;font-family:var(--font-code);font-size:0.72rem;color:var(--gray);text-transform:uppercase;letter-spacing:0.08em">Solution complète</div>
+                        <pre style="background:var(--code-bg);margin:0.5rem 1.5rem 1.5rem;border-radius:var(--radius);padding:1.25rem;overflow-x:auto;font-family:var(--font-code);font-size:0.75rem;line-height:1.7;border:1px solid var(--border)"><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="str">"fr"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="str">"UTF-8"</span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;title&gt;</span>Calculatrice<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;style&gt;</span>
+    <span class="prop">*</span> { box-sizing: border-box; margin: 0; padding: 0; }
+    <span class="prop">body</span> { font-family: sans-serif; background: #0f0f1a;
+           color: #f0f0f8; display: flex; justify-content: center;
+           align-items: center; min-height: 100vh; }
+    <span class="prop">.calc</span> { background: #1a1a28; border-radius: 20px;
+              padding: 1.5rem; width: 320px;
+              box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
+    <span class="prop">.screen</span> { background: #0a0a0f; border-radius: 12px;
+               padding: 1rem 1.25rem; margin-bottom: 1rem;
+               text-align: right; border: 1px solid #2a2a3a; }
+    <span class="prop">.expr</span> { font-size: 0.8rem; color: #8888aa; min-height: 1.2em; }
+    <span class="prop">.result</span> { font-size: 2rem; font-weight: 700; color: #f0f0f8; }
+    <span class="prop">.grid</span> { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; }
+    <span class="prop">button</span> { padding: 1rem; border-radius: 10px; border: none;
+              font-size: 1rem; font-weight: 600; cursor: pointer;
+              transition: filter 0.15s; }
+    <span class="prop">button:hover</span> { filter: brightness(1.2); }
+    <span class="prop">.btn-num</span> { background: #1e1e2e; color: #f0f0f8; }
+    <span class="prop">.btn-op</span>  { background: rgba(38,77,228,0.25); color: #7a9cf0; }
+    <span class="prop">.btn-eq</span>  { background: #f7ca18; color: #000; grid-column: span 2; }
+    <span class="prop">.btn-clr</span> { background: rgba(227,76,38,0.2); color: #e34c26; grid-column: span 2; }
+  <span class="tag">&lt;/style&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"calc"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"screen"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"expr"</span> <span class="attr">id</span>=<span class="str">"expr"</span><span class="tag">&gt;&lt;/div&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"result"</span> <span class="attr">id</span>=<span class="str">"result"</span><span class="tag">&gt;</span>0<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"grid"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-clr"</span> <span class="attr">onclick</span>=<span class="str">"clear()"</span><span class="tag">&gt;</span>C<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-op"</span>  <span class="attr">onclick</span>=<span class="str">"press('/')"</span><span class="tag">&gt;</span>÷<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-op"</span>  <span class="attr">onclick</span>=<span class="str">"press('*')"</span><span class="tag">&gt;</span>×<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-num"</span> <span class="attr">onclick</span>=<span class="str">"press('7')"</span><span class="tag">&gt;</span>7<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-num"</span> <span class="attr">onclick</span>=<span class="str">"press('8')"</span><span class="tag">&gt;</span>8<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-num"</span> <span class="attr">onclick</span>=<span class="str">"press('9')"</span><span class="tag">&gt;</span>9<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-op"</span>  <span class="attr">onclick</span>=<span class="str">"press('-')"</span><span class="tag">&gt;</span>−<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-num"</span> <span class="attr">onclick</span>=<span class="str">"press('4')"</span><span class="tag">&gt;</span>4<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-num"</span> <span class="attr">onclick</span>=<span class="str">"press('5')"</span><span class="tag">&gt;</span>5<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-num"</span> <span class="attr">onclick</span>=<span class="str">"press('6')"</span><span class="tag">&gt;</span>6<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-op"</span>  <span class="attr">onclick</span>=<span class="str">"press('+')"</span><span class="tag">&gt;</span>+<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-num"</span> <span class="attr">onclick</span>=<span class="str">"press('1')"</span><span class="tag">&gt;</span>1<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-num"</span> <span class="attr">onclick</span>=<span class="str">"press('2')"</span><span class="tag">&gt;</span>2<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-num"</span> <span class="attr">onclick</span>=<span class="str">"press('3')"</span><span class="tag">&gt;</span>3<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-num"</span> <span class="attr">onclick</span>=<span class="str">"press('0')"</span> <span class="attr">style</span>=<span class="str">"grid-column:span 2"</span><span class="tag">&gt;</span>0<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-num"</span> <span class="attr">onclick</span>=<span class="str">"press('.')"</span><span class="tag">&gt;</span>.<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-eq"</span>  <span class="attr">onclick</span>=<span class="str">"calculate()"</span><span class="tag">&gt;</span>=<span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;script&gt;</span>
+    <span class="kw">let</span> expr = <span class="str">''</span>;
+    <span class="kw">function</span> press(v) {
+      expr += v;
+      document.getElementById(<span class="str">'expr'</span>).textContent = expr;
+    }
+    <span class="kw">function</span> calculate() {
+      <span class="kw">try</span> {
+        <span class="kw">const</span> res = Function(<span class="str">'"use strict"; return ('</span> + expr + <span class="str">')'</span>)();
+        document.getElementById(<span class="str">'result'</span>).textContent = res;
+        expr = String(res);
+      } <span class="kw">catch</span>(e) {
+        document.getElementById(<span class="str">'result'</span>).textContent = <span class="str">'Erreur'</span>;
+        expr = <span class="str">''</span>;
+      }
+    }
+    <span class="kw">function</span> clear() {
+      expr = <span class="str">''</span>;
+      document.getElementById(<span class="str">'expr'</span>).textContent = <span class="str">''</span>;
+      document.getElementById(<span class="str">'result'</span>).textContent = <span class="str">'0'</span>;
+    }
+  <span class="tag">&lt;/script&gt;</span>
+<span class="tag">&lt;/body&gt;&lt;/html&gt;</span></pre>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="divider" />
 
         <!-- ══════════════════════════════════════
      IDE EN LIGNE
@@ -3477,7 +3715,7 @@ attendre(100).then(() => console.log('✓ Promesse résolue'));</textarea>
 
         // Update active nav tab on scroll
         window.addEventListener('scroll', () => {
-            const sections = ['html-section', 'css-section', 'js-section', 'quiz-section', 'cheat-section', 'ide-section'];
+            const sections = ['html-section', 'css-section', 'js-section', 'quiz-section', 'cheat-section', 'exercices-section', 'ide-section'];
             const labels = ['HTML', 'CSS', 'JavaScript', 'Quiz', 'Cheat Sheet'];
             const tabs = document.querySelectorAll('.navbar-tabs .nav-tab');
             const scroll = window.scrollY + 120;
@@ -3583,6 +3821,17 @@ attendre(100).then(() => console.log('✓ Promesse résolue'));</textarea>
             display.style.color = 'var(--gray)';
             document.getElementById('counterMsg').textContent = 'Remis à zéro.';
             setTimeout(() => document.getElementById('counterMsg').textContent = '', 1500);
+        }
+
+        // ─── EXERCICES SOLUTIONS ──────────────────
+        function toggleSolution(id) {
+            const box   = document.getElementById('solution-' + id);
+            const icon  = document.getElementById(id + '-icon');
+            const label = document.getElementById(id + '-label');
+            const open  = box.style.display === 'none';
+            box.style.display  = open ? 'block' : 'none';
+            icon.textContent   = open ? '🙈' : '👁';
+            label.textContent  = open ? 'Cacher la solution' : 'Voir la solution';
         }
 
         // ─── QUIZ — 150 QUESTIONS ──────────────────
@@ -3748,6 +3997,7 @@ attendre(100).then(() => console.log('✓ Promesse résolue'));</textarea>
         let quizPool = [...allQuizData];
         let currentQ = 0;
         let score = 0;
+        let wrongAnswers = 0;
         let answered = false;
 
         function setFilter(filter) {
@@ -3755,6 +4005,7 @@ attendre(100).then(() => console.log('✓ Promesse résolue'));</textarea>
             quizPool = filter === 'Tous' ? [...allQuizData] : allQuizData.filter(q => q.topic === filter);
             currentQ = 0;
             score = 0;
+            wrongAnswers = 0;
             document.getElementById('quizArea').style.display = '';
             document.getElementById('quizScore').classList.remove('show');
             // Update button styles
@@ -3815,6 +4066,7 @@ attendre(100).then(() => console.log('✓ Promesse résolue'));</textarea>
                 fb.textContent = '✓ Bonne réponse ! ' + q.exp;
                 fb.className = 'quiz-feedback show ok';
             } else {
+                wrongAnswers++;
                 opts[idx].classList.add('wrong');
                 fb.textContent = '✗ ' + q.exp;
                 fb.className = 'quiz-feedback show ko';
@@ -3842,12 +4094,25 @@ attendre(100).then(() => console.log('✓ Promesse résolue'));</textarea>
             document.getElementById('scoreNum').textContent = `${score}/${quizPool.length}`;
             document.getElementById('scoreTitle').textContent = pct >= 87 ? 'Félicitations !' : pct >= 62 ? 'Bon résultat !' : pct >= 37 ? 'Pas mal !' : 'Continue !';
             document.getElementById('scoreMsg').textContent = msg;
+            document.getElementById('scoreDetails').innerHTML = `
+                <div style="display:flex;gap:1.5rem;justify-content:center;margin-bottom:1rem">
+                    <div style="text-align:center;padding:0.75rem 1.5rem;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:12px">
+                        <div style="font-size:1.8rem;font-weight:800;color:#22c55e">${score}</div>
+                        <div style="font-size:0.8rem;color:var(--gray);margin-top:2px">✓ Bonnes réponses</div>
+                    </div>
+                    <div style="text-align:center;padding:0.75rem 1.5rem;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);border-radius:12px">
+                        <div style="font-size:1.8rem;font-weight:800;color:#ef4444">${wrongAnswers}</div>
+                        <div style="font-size:0.8rem;color:var(--gray);margin-top:2px">✗ Mauvaises réponses</div>
+                    </div>
+                </div>
+            `;
             document.getElementById('quizScore').classList.add('show');
         }
 
         function restartQuiz() {
             currentQ = 0;
             score = 0;
+            wrongAnswers = 0;
             document.getElementById('quizArea').style.display = '';
             document.getElementById('quizScore').classList.remove('show');
             renderQuiz();
@@ -3953,6 +4218,5 @@ attendre(100).then(() => console.log('✓ Promesse résolue'));</textarea>
         renderQuiz();
     </script>
 </body>
-
 
 </html>
